@@ -11,15 +11,15 @@ permissions:
       - file
 hooks:
  ApplicationStop:
-    - location: codedeploy/stop_server.sh
+    - location: /stop_server.sh
       timeout: 300
 runas: tomcat
 BeforeInstall:
-    - location: codedeploy/clean_server.sh
+    - location: /clean_server.sh
       timeout: 300
       runas: tomcat
 ApplicationStart:
-    - location: codedeploy/start.sh
+    - location: /start.sh
       timeout: 300
       runas: tomcat
 
