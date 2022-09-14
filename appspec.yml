@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /tomcat/applications/test8180
+    overwrite: yes 
 permissions:
   - object: /
     owner: tomcat
