@@ -1,0 +1,25 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tomcat/applications/test8180
+permissions:
+  - object: /
+    owner: tomcat
+    group: tomcat
+    type:
+      - file
+hooks:
+ ApplicationStop:
+    - location: codedeploy/stop_server.sh
+      timeout: 300
+runas: tomcat
+BeforeInstall:
+    - location: codedeploy/clean_server.sh
+      timeout: 300
+      runas: tomcat
+ApplicationStart:
+    - location: codedeploy/start.sh
+      timeout: 300
+      runas: tomcat
+
