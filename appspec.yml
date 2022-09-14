@@ -14,13 +14,10 @@ hooks:
  ApplicationStop:
     - location: Scripts/stop_server.sh
       timeout: 300
-runas: tomcat
 BeforeInstall:
     - location: Scripts/clean_server.sh
       timeout: 300
-      runas: tomcat
 ApplicationStart:
     - location: Scripts/start.sh
       timeout: 300
-      runas: tomcat
 
