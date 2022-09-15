@@ -12,12 +12,12 @@ permissions:
       - file
 hooks:
  ApplicationStop:
-    - location: Scripts/stop_server.sh
+    - location: /Scripts/stop_server.sh
       timeout: 300
 BeforeInstall:
-    - location: Scripts/clean_server.sh
+    - location: /Scripts/clean_server.sh
       timeout: 300
 ApplicationStart:
-    - location: Scripts/start.sh
+    - location: /Scripts/start.sh
       timeout: 300
 
