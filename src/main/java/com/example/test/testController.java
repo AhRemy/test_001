@@ -11,13 +11,11 @@ public class testController {
 	 * jsp 호출 테스트 
 	 */
 	
-	@RequestMapping("/jsp.do")
+	@RequestMapping("/")
 	public String welcome() {
 		return "welcome";
 		
 	}
-	
-	
 	
 	
 	/**
