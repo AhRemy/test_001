@@ -15,8 +15,8 @@ configurations {
 	}
 }
 
-jar {
-    enabled = false
+war {
+  enabled = false
 }
 
 repositories {
