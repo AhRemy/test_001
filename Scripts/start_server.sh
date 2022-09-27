@@ -1,3 +1,3 @@
 #!/bin/sh
 cd /home/ec2-user/codedeploy-test
-sudo java -jar *.jar
+java -jar test-0.0.1-SNAPSHOT.jar
