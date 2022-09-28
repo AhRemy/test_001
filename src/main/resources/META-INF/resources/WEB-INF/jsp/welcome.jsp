@@ -8,7 +8,7 @@ System.out.println( "Session ID : " + session.getId() );
 <title>Welcome</title>
 </head>
 <body>
-<h1>Session Clustering Test</h1>
+<h1>Session Clustering Test~~</h1>
 <%
     Integer ival = (Integer)session.getAttribute("_session_counter");
 
@@ -22,7 +22,7 @@ System.out.println( "Session ID : " + session.getId() );
     System.out.println("here~~~~");
 %>
 Session Counter = [<b> <%= ival %> </b>]<p>
-<a href="jsp.do">[Reload]</a>
+<a href="/">[Reload]</a>
 <p>
 Current Session ID : <%= request.getRequestedSessionId() %><br />
 <center><h3>[ Session Test  ]</h3></center>
