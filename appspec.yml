@@ -11,12 +11,12 @@ permissions:
 hooks:
   ApplicationStop:
     - location: Scripts/stop_server.sh
-      runs: ec2-user
+
   BeforeInstall:
     - location: Scripts/clean_server.sh
-      runs: ec2-user
+
   ApplicationStart:
     - location: Scripts/start_server.sh
-      runs: ec2-user
+
 
 
