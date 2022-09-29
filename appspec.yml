@@ -11,12 +11,14 @@ permissions:
 hooks:
   ApplicationStop:
     - location: Scripts/stop_server.sh
+      timeout: 300
+      
 
   BeforeInstall:
     - location: Scripts/clean_server.sh
-
+      timeout: 300
   ApplicationStart:
     - location: Scripts/start_server.sh
-
+      timeout: 300
 
 
