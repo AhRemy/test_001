@@ -1,0 +1,63 @@
+spring:
+  profiles:
+    group:
+      local : local,common
+      
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - local
+       
+        
+server:
+    port:
+        8082
+        
+
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - dev 
+server:
+    port:
+        8081
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+      - prd
+
+
+server:
+    port:
+        8082
+
+        
+---
+spring:
+  config:
+    activate:
+      on-profile: 
+      - common
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  thymeleaf:
+    prefix: classpath:/templates/   
+    suffix: .html  
+    cache: false 
+    view-names: thymeleaf/*
+
+   
+    
+           
+        
+        
