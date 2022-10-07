@@ -26,16 +26,17 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-web-services'
+	implementation 'net.javacrumbs.shedlock:shedlock-spring:4.29.0'
+	implementation 'net.javacrumbs.shedlock:shedlock-provider-jdbc-template:4.29.0'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.apache.tomcat:tomcat-catalina-ha:9.0.62'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf', version: '2.7.3'
 	implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
 	implementation group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.35'
 	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-tasks.named('test') {
-	useJUnitPlatform()
 }
