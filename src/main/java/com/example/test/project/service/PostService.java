@@ -52,7 +52,7 @@ public class PostService {
 	
 	@Transactional
 	public Long update(final Long id, final PostSaveDto params) {	
-		Post entity = postRepository.findById(id).orElseThrow();
+		Post entity = postRepository.findById(id).orElseThrow(null);
 		entity.update(params.getTitle(),params.getContent(),params.getAuthor());
 		return id;
 	}
