@@ -76,12 +76,6 @@ spring:
     activate:
       on-profile: 
       - localdb
- datasource:
-    url: jdbc:oracle:thin:@127.0.0.1:1522/xe
-    username: test_user
-    password: 1234
-    driver-class-name: oracle.jdbc.driver.OracleDriver
-
 
 
 
