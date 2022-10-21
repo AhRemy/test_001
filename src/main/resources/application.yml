@@ -1,56 +1,7 @@
 spring:
-  profiles:
-    group:
-      local : local,common
-      
----
-spring:
-  config:
-    activate:
-      on-profile:
-      - local
-       
-        
-server:
-    port:
-        8080
-    ssl:
-      enabled: true
-      key-store-type: "PKC12"
-      key-alias: vlutest.tk
-   
----
-spring:                        
-  config:
-    activate:
-      on-profile:
-      - dev 
-server:
-    port:
-        8080
-
----
-spring:
-  config:
-    activate:
-      on-profile:
-      - prd
-
-
-server:
-    port:
-        8080
-
-        
----
-spring:
-  config:
-    activate:
-      on-profile: 
-      - common
   mvc:
     view:
-      prefix: /WEB-INF/jsp/
+      prefix: /WEB-INF/jsp
       suffix: .jsp
       
   thymeleaf:
@@ -59,18 +10,17 @@ spring:
     cache: false
     view-names:
     - thymeleaf/*
- 
-
----
-spring:
- config:
-    activate:
-      on-profile: 
-      - localdb
 
 
+server:
+  port: 8080
 
-
+  ssl:
+     enabled: true
+     key-store: certificate.p12
+     key-store-type: "PKCS12"
+     key-store-password: vlutest
+     key-alias: vlutest.tk
 
 
 

@@ -14,11 +14,10 @@ public class TestController {
 	 *jsp 호출테스트
 	 */
 	
-	@GetMapping("jsp.do")
-	public String welcome() {
+	@RequestMapping("/jsp")
+	public String root() {
 		return "welcome";
 	}
-	
 	
 	/**
 	 * thymeleaf 호출 test
