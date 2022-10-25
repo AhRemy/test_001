@@ -13,16 +13,16 @@ spring:
 
 
 server:
-  port: 8080
-
+  port: 80
+  
   ssl:
      enabled: true
      key-store: certificate.p12
      key-store-type: "PKCS12"
      key-store-password: vlutest
      key-alias: vlutest.tk
-
-
+  http2:
+    enabled: true
 
     
 
