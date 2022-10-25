@@ -1,3 +1,4 @@
+
 spring:
   mvc:
     view:
@@ -13,7 +14,7 @@ spring:
 
 
 server:
-  port: 80
+  port: 8080
   
   ssl:
      enabled: true
@@ -23,6 +24,8 @@ server:
      key-alias: vlutest.tk
   http2:
     enabled: true
+    
+
 
     
 
