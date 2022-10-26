@@ -25,7 +25,6 @@ public class TestController {
 	
 	@RequestMapping("/")
 	public String welcome(Model model) throws Exception {
-
 		model.addAttribute("greeting", "Thymeleaf Test~~~!!");
 		
 		return "thymeleaf/welcome";
