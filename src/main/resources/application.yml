@@ -11,7 +11,7 @@ spring:
     view-names:
     - thymeleaf/*
 server:
-  port: 443
+  port: 8443
   ssl:
      enabled: true
      protocol: TLS
