@@ -2,7 +2,6 @@ package com.example.test;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
@@ -14,7 +13,7 @@ public class TestController {
 	 *jsp 호출테스트
 	 */
 	
-	@RequestMapping("/jsp")
+	@RequestMapping("/")
 	public String root() {
 		return "welcome";
 	}
@@ -23,9 +22,9 @@ public class TestController {
 	 * thymeleaf 호출 test
 	 */
 	
-	@RequestMapping("/")
+	@RequestMapping("/hello")
 	public String welcome(Model model) throws Exception {
-		model.addAttribute("greeting", "Thymeleaf Test~~~!!");
+		model.addAttribute("greeting", "안녕세요~??");
 		
 		return "thymeleaf/welcome";
 		

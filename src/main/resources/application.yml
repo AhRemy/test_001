@@ -1,7 +1,7 @@
 spring:
   mvc:
     view:
-      prefix: /WEB-INF/jsp
+      prefix: /WEB-INF/jsp/
       suffix: .jsp
       
   thymeleaf:
@@ -10,21 +10,10 @@ spring:
     cache: false
     view-names:
     - thymeleaf/*
+
 server:
-  port: 8443
-  ssl:
-     enabled: true
-     protocol: TLS
-     enabled-protocols: TLSv1.1
-     key-store: certificate.p12
-     key-store-type: "PKCS12" 
-     key-store-password: 1234567890
-  http2:
-    enabled: true
-  tomcat:
-    remoteip:
-      protocol-header: x-forwarded-proto
-      remote-ip-header: x-forwarded-for
+  port: 8080
+
 
 
  
